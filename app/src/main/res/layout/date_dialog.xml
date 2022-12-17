@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@drawable/dialog_bg"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/titleTv"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="请选择月份"
+            android:layout_marginLeft="16dp"
+            android:textColor="#fff"
+            android:gravity="center_vertical"
+            android:textSize="16sp"/>
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:spinnersShown="true"
+            android:calendarViewShown="false"
+            android:background="#fff"
+            android:datePickerMode="spinner"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#ddd"/>
+        <TextView
+            android:id="@+id/confirmTv"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="确认"
+            android:gravity="center"
+            android:textColor="#368FF8"
+            android:background="@drawable/confirm_bg"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+</LinearLayout>

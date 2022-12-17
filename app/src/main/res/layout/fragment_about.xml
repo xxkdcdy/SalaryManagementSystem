@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="repository"
+            type="com.ujs.salarymanagementsystem.data.LoginRepository" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.qmuiteam.qmui.widget.QMUIRadiusImageView2
+            android:id="@+id/icon"
+            android:layout_marginTop="30dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:qmui_is_circle="true"
+            android:layout_gravity="center"
+            android:src="@drawable/img" />
+
+        <com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:textSize="15dp"
+            android:textColor="@color/app_color_yellow"
+            android:id="@+id/username"
+            android:text="@{repository.userName}"></com.qmuiteam.qmui.widget.textview.QMUISpanTouchFixTextView>
+
+        <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+            android:layout_marginTop="30dp"
+            android:id="@+id/grouplistview_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <com.qmuiteam.qmui.widget.grouplist.QMUIGroupListView
+            android:layout_marginTop="30dp"
+            android:id="@+id/grouplistview_options"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="1000dp"
+            android:layout_marginBottom="0dp"/>
+
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="department"
+            type="com.ujs.salarymanagementsystem.data.model.Department" />
+    </data>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="6dp"
+        app:qmui_skin_background="?attr/qmui_skin_support_s_list_item_bg_1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/background_department"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/card"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/item_name"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center_horizontal|top"
+                android:layout_weight="3"
+                android:lines="2"
+                android:textColor="?attr/qmui_config_color_gray_6"
+                android:text="@{department.dname}"
+                android:textSize="28sp"/>
+
+            <ImageButton
+                android:id="@+id/item_icon_department"
+                android:layout_width="110dp"
+                android:layout_height="50dp"
+                android:background="@drawable/item_home_normal"
+                android:contentDescription="Item Icon"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>

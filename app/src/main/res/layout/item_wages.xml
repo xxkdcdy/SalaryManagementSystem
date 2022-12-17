@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="wages"
+            type="com.ujs.salarymanagementsystem.data.model.Wages" />
+    </data>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="6dp"
+        app:qmui_skin_background="?attr/qmui_skin_support_s_list_item_bg_1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@drawable/background_wages"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:id="@+id/card"
+            android:padding="8dp">
+
+            <!-- 发薪日期 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_name_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="发薪日期 "
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/item_detail_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="@{wages.data}"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- 应发金额 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_name_p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="应发金额 "
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/item_detail_p"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="@{wages.amount_P}"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- 应扣金额 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_name_d"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="应扣金额 "
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/item_detail_d"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="@{wages.amount_D}"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+            <!-- 实发金额 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/item_name_s"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="实发金额 "
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/item_detail_s"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal|top"
+                    android:textColor="?attr/qmui_config_color_gray_6"
+                    android:text="@{wages.amount_S}"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
